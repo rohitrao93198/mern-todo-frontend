@@ -25,10 +25,10 @@ const TodoForm = ({ fetchTodos, editTodo, setEditTodo }) => {
 
         try {
             if (editTodo) {
-                await axios.put(`http://localhost:5000/api/todos/${editTodo._id}`, payload, config);
+                await axios.put(`https://vercel-todo-backend.onrender.com/api/todos/${editTodo._id}`, payload, config);
                 setEditTodo(null);
             } else {
-                await axios.post('http://localhost:5000/api/todos', payload, config);
+                await axios.post('https://vercel-todo-backend.onrender.com/api/todos', payload, config);
             }
 
             setTitle('');

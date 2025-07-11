@@ -6,7 +6,7 @@ const TodoList = ({ todos, fetchTodos, setEditTodo, searchQuery }) => {
     const toggleComplete = async (todo) => {
         try {
             await axios.put(
-                `http://localhost:5000/api/todos/${todo._id}`,
+                `https://vercel-todo-backend.onrender.com/api/todos/${todo._id}`,
                 { completed: !todo.completed },
                 {
                     headers: {
@@ -22,7 +22,7 @@ const TodoList = ({ todos, fetchTodos, setEditTodo, searchQuery }) => {
 
     const deleteTodo = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/todos/${id}`, {
+            await axios.delete(`https://vercel-todo-backend.onrender.com/api/todos/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

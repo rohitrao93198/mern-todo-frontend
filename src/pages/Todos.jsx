@@ -22,7 +22,7 @@ const Todos = () => {
             setUserName(decoded.name);         // ✅ set name
         }
         try {
-            const res = await axios.get('http://localhost:5000/api/todos', {
+            const res = await axios.get('https://vercel-todo-backend.onrender.com/api/todos', {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setTodos(res.data);
