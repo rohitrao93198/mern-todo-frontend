@@ -1,0 +1,122 @@
+this is my todos.css
+/* src/pages/Todos.css */
+
+.todos-container {
+  width: 90%;
+  max-width: 900px; /* Increased from previous limit */
+  height: 90vh;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* Header layout */
+.todos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Logout button */
+.logout-btn {
+  padding: 8px 16px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+/* Search input */
+.search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Fix input + date field layout */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="date"] {
+  flex: 1;
+  min-width: 180px;
+}
+
+form button {
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Todo item layout */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f9f9f9;
+  border-left: 4px solid #007bff;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+li span {
+  flex: 1;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Buttons in each todo */
+li button {
+  padding: 6px 12px;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+li button:first-of-type {
+  background-color: #ffa500;
+}
+
+li button:last-of-type {
+  background-color: #ff4d4f;
+}
